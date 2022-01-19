@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  position: relative;
+  width: 320px;
+  background-color: #fff;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 12px;
+  color: #3c3c3d;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.content-header .header-center {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  color: #000;
+}
+
+.content-header .header-left.icon {
+  cursor: pointer;
+}
+
+.content-body {
+  background-color: #f2f2f2;
+  padding: 8px 12px;
+  height: 450px;
+  overflow-y: auto;
+}
+
+
+.content-wrapper.settings {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: -100%;
+  /* left: 0; */
+  z-index: 10;
+  transition: left 0.3s;
+}
+
+.config-add-btn {
+  font-size: 16px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.config-item {
+  font-size: 14px;
+  padding: 14px 12px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.config-item .config-item-host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.switch-wrapper {
+  position: relative;
+  width: 50px;
+  height: 30px;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.switch-wrapper .switch-input {
+  display: none;
+}
+
+.switch-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 34px;
+  background-color: #ccc;
+  transition: all .3s;
+}
+
+.switch-slider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 26px;
+  margin: 3px 4px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all .5s;
+}
+
+.switch-wrapper .switch-input:checked + .switch-slider {
+  background-color: #2196F3;
+}
+.switch-wrapper .switch-input:checked + .switch-slider::before {
+  right: 0;
+}
+
+.switch-wrapper .switch-input:focus + .switch-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.config-item .config-item-code {
+  width: 100%;
+  word-break: break-all;
+  box-sizing: border-box;
+  padding: 4px 4px;
+  background-color: #000;
+  color: skyblue;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.config-item .config-item-btns {
+  display: inline-flex;
+}
+.config-item .config-item-btns .btns-item {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #08c;
+  margin-right: 10px;
+}
+
+.code-wrapper {
+  height: 100%;
+  border-radius: 4px;
+  line-height: 2;
+  box-sizing: border-box;
+}
+
+.code-wrapper-textarea {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  line-height: 1.5;
+  overflow-y: auto;
+}
+
+.code-host-input {
+  display: block;
+  width: 100%;
+  line-height: 1.5;
+  padding: 4px 6px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.code-btn-wrapper {
+  display: flex;
+}
+
+.code-btn-item {
+  flex: 1;
+  margin-right: 10px;
+  line-height: 2.5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.code-btn-item:last-child {
+  margin-right: 0;
+}
