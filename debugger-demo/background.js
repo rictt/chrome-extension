@@ -1,0 +1,1 @@
+console.log('Im running in background.js')

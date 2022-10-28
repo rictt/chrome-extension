@@ -37,7 +37,6 @@
   overflow-y: auto;
 }
 
-
 .content-wrapper.settings {
   position: absolute;
   width: 100%;
@@ -48,6 +47,21 @@
   transition: left 0.3s;
 }
 
+.config-btn-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.config-btn-list .config-btn {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.config-btn-list .config-btn:last-child {
+  margin-right: 0;
+}
+
+.config-btn,
 .config-add-btn {
   font-size: 16px;
   border: 1px solid #ddd;
@@ -58,11 +72,16 @@
 }
 
 .config-item {
+  position: relative;
   font-size: 14px;
   padding: 14px 12px;
   background-color: #fff;
   border-radius: 4px;
   margin-bottom: 20px;
+}
+
+.config-item:hover .config-item-close {
+  z-index: 10;
 }
 
 .config-item .config-item-host {
@@ -71,6 +90,14 @@
   align-items: center;
   margin-bottom: 10px;
   font-size: 12px;
+}
+
+.config-item .config-item-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  cursor: pointer;
 }
 
 .switch-wrapper {
@@ -93,11 +120,11 @@
   right: 0;
   border-radius: 34px;
   background-color: #ccc;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .switch-slider::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -105,18 +132,18 @@
   margin: 3px 4px;
   border-radius: 50%;
   background-color: #fff;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .switch-wrapper .switch-input:checked + .switch-slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 .switch-wrapper .switch-input:checked + .switch-slider::before {
   right: 0;
 }
 
 .switch-wrapper .switch-input:focus + .switch-slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 .config-item .config-item-code {

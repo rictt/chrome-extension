@@ -1,0 +1,20 @@
+[
+    {
+        "host": "zhihu.com",
+        "id": 1642062192549,
+        "status": true,
+        "style": ".ColumnPageHeader-Wrapper, .AppHeader,\n.Post-SideActions\n{\n  display: none;\n}"
+    },
+    {
+        "host": "bilibili.com",
+        "id": 1642062192122,
+        "status": true,
+        "style": ".short-margin {display: none;}"
+    },
+    {
+        "host": "test",
+        "id": 123333123312,
+        "status": false,
+        "style": "none"
+    }
+]

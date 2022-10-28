@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="popup.css">
-</head>
-<body>
-  <div class="page-wrapper">
-    <div class="content-wrapper">
-      <div class="content-header">
-        <div class="header-left icon" id="goSettings">设置</div>
-        <div class="header-center">页面配置</div>
-        <div class="header-right">其他</div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div class="content-wrapper">
+        <div class="content-header">
+          <div class="header-left icon" id="goSettings">设置</div>
+          <div class="header-center">页面配置</div>
+          <!-- <div class="header-right">其他</div> -->
+        </div>
+        <div class="content-body">
+          <div class="config-wrapper">
+            <div class="config-btn-list">
+              <div class="config-btn" id="import">导入配置</div>
+              <div class="config-btn" id="export">导出配置</div>
+            </div>
+            <div class="config-add-btn" id="add">添加配置</div>
+            <div id="config-list" class="config-list">
+              <div class="config-item">
+                <h3 class="config-item-host">
+                  <span>https://badiuc.com</span>
+                  <label class="switch-wrapper">
+                    <input class="switch-input" type="checkbox" checked />
+                    <div class="switch-slider round"></div>
+                  </label>
+                </h3>
+                <div class="config-item-code">
+                  *{margin:0;padding:0}.page-wrapper{position:relative;width:320px;background-color:#fff}.content-header{display:flex;justify-content:space-around;align-items:center;padding:8px
+                  12px;color:#3c3c3d;border-bottom:1px solid
+                  #ddd;background-color:#fff}.content-header
+                  .header-center{flex:1;text-align:center;font-size:20px;color:#000}.content-header
+                  .header-left.icon{cursor:pointer}
+                </div>
+                <div class="config-item-close">
+                  <span>删除</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="content-body">
-        <div class="config-wrapper">
-          <div class="config-add-btn" id="add">添加配置</div>
-          <div id="config-list" class="config-list">
-            <div class="config-item">
-              <!-- <h3 class="config-item-host">
-                <span>https://badiuc.com</span>
-                <label class="switch-wrapper">
-                  <input class="switch-input" type="checkbox" checked>
-                  <div class="switch-slider round"></div>
-                </label>
-              </h3> -->
-              <!-- <div class="config-item-code">*{margin:0;padding:0}.page-wrapper{position:relative;width:320px;background-color:#fff}.content-header{display:flex;justify-content:space-around;align-items:center;padding:8px 12px;color:#3c3c3d;border-bottom:1px solid #ddd;background-color:#fff}.content-header .header-center{flex:1;text-align:center;font-size:20px;color:#000}.content-header .header-left.icon{cursor:pointer}</div> -->
+
+      <div class="content-wrapper settings" id="settings">
+        <div class="content-header">
+          <div class="header-left icon" id="goBack">返回</div>
+          <div class="header-center">设置</div>
+          <div class="header-right">其他</div>
+        </div>
+        <div class="content-body">
+          <div class="code-wrapper">
+            <input
+              id="hostInput"
+              class="code-host-input"
+              type="text"
+              placeholder="规则，域名等，支持正则"
+            />
+            <textarea
+              id="styleInput"
+              class="code-wrapper-textarea"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <div class="code-btn-wrapper">
+              <div class="code-btn-item" id="save">保存</div>
+              <div class="code-btn-item" id="cancel">返回</div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="content-wrapper settings" id="settings">
-      <div class="content-header">
-        <div class="header-left icon" id="goBack">返回</div>
-        <div class="header-center">设置</div>
-        <div class="header-right">其他</div>
-      </div>
-      <div class="content-body">
-        <div class="code-wrapper">
-          <input id="hostInput" class="code-host-input" type="text" placeholder="规则，域名等，支持正则">
-          <textarea id="styleInput" class="code-wrapper-textarea" cols="30" rows="10"></textarea>
-          <div class="code-btn-wrapper">
-            <div class="code-btn-item" id="save">保存</div>
-            <div class="code-btn-item" id="cancel">返回</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="popup.js"></script>
-</body>
+    <script src="popup.js"></script>
+  </body>
 </html>

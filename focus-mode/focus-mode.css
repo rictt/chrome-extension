@@ -1,0 +1,8 @@
+.Question-sideColumn,
+.AppHeader-inner {
+  display: none !important;
+}
+
+.Question-mainColumn {
+  width: auto !important;
+}
